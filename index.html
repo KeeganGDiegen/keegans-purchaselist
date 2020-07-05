@@ -72,6 +72,9 @@
 						<button type="button" class="btn btn-primary sort" data-sort="abr">
 							Sort
 						</button>
+						<button type="button" class="btn btn-primary sort" data-sort="category">
+							Sort
+						</button>
 						<button type="button" class="btn btn-primary sort" data-sort="price">
 							Sort by Price
 						</button>
@@ -81,6 +84,7 @@
 
 						<tr>
 							<th scope="col" class="sort" data-sort="abr">Name</th>
+							<th scope="col" class="sort" data-sort="category">Category</th>
 							<th scope="col" class="sort" data-sort="price">Price</th>
 						</tr>
 
@@ -187,7 +191,7 @@
 		$.getJSON( itemListURL, function( data ) {
 		  var options = {
 		      valueNames: ['abr', 'price'],
-		      item: '<tr><td class="abr" scope="row"></td><td class="price"></td></tr>'
+		      item: '<tr><td class="abr" scope="row"></td><td class="price"></td></tr></td><td class="category"></td></tr>'
 		    };
 
 		    var itemData = [];
@@ -204,7 +208,7 @@
 
 		$.getJSON( eventListURL, function( data ) {
 		  var options = {
-		      valueNames: ['abr', 'price', 'karmatype'],
+		      valueNames: ['abr', 'price', 'karmatype', 'category'],
 		      item: '<tr><td class="abr" scope="row"></td><td class="price"></td><td class="karmatype"></td></tr>'
 		    };
 
